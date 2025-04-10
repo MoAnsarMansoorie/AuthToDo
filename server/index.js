@@ -2,6 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import connectDb from "./db/connectDb.js"
 import authRoute from "./routes/authRoute.js"
+import todoRoute from "./routes/todoRoute.js"
 import cors from "cors"
 dotenv.config()
 
@@ -21,6 +22,7 @@ app.use(cors({
 }))
 
 app.use("/api/auth", authRoute)
+app.use("/api/todos", todoRoute)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)

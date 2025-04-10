@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Register from './components/Register';
 import Login from './components/Login';
-import TodoList from './components/TodoList';
-import ProtectedRoute from './components/Routes/ProtectedRoute'; // Make sure path is correct
+import ProtectedRoute from './components/Routes/ProtectedRoute'; 
+import TodoListt from './components/TodoListt'; 
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           path="/todo"
           element={
             <ProtectedRoute>
-              <TodoList />
+              <TodoListt />
             </ProtectedRoute>
           }
         />
